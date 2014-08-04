@@ -34,8 +34,8 @@ var GIBComparisonTool = function () {
   };
   
   // Constants
-  var TFCAP  = 19198,
-      AVGBAH = 1429,
+  var TFCAP  = 20235.02,
+      AVGBAH = 1509,
       BSCAP  = 1000,
       TUITIONASSISTCAP = 4500,
       GROUP1GRADMED  = 39.4,
