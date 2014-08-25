@@ -18,9 +18,9 @@ To build the site, simply run `jekyll build` in the command line. The site will 
 
 The application uses a lot of open data from a CSV file named `data.csv` in the [`_data/`](/_data) directory with the following headers (in this order):
 
-| facility_code | institution | city   | state  | country | bah     | poe     | yr      | gibill  | cross   | grad_rate | grad_rate_rank | default_rate | avg_stu_loan_debt | avg_stu_loan_debt_rank | indicator_group | salary | zip    | ope    |
-| ------------- | ----------- | ------ | ------ | ------- | ------- | ------- | ------- | ------- | ------- | --------- | -------------- | ------------ | ----------------- | ---------------------- | --------------- | ------ | ------ | ------ |
-| String        | String      | String | String | String  | Integer | Boolean | Boolean | Integer | Integer | Float     | Integer        | Float        | Integer           | Integer                | Integer         | String | String | String |
+| facility_code | institution | city   | state  | zip    | country | type   | cross   | ope    | bah     | poe     | yr      | gibill  | student_veteran | student_veteran_link | vetsuccess_name | vetsuccess_email | eight_keys | correspondence | flight  | grad_rate | grad_rate_rank | default_rate | avg_stu_loan_debt | avg_stu_loan_debt_rank | indicator_group | salary  | calendar | tuition_in_state | tuition_out_of_state |
+| ------------- | ----------- | ------ | ------ | ------ | ------- | ------ | ------- | ------ | ------- | ------- | ------- | ------- | --------------- | -------------------- | --------------- | ---------------- | ---------- | -------------- | ------- | --------- | -------------- | ------------ | ----------------- | ---------------------- | --------------- | ------- | -------- | ---------------- | -------------------- |
+| String        | String      | String | String | String | String  | String | Integer | String | Integer | Boolean | Boolean | Integer | Boolean         | String               | String          | String           | Boolean    | Boolean        | Boolean | Float     | Integer        | Float        | Integer           | Integer                | Integer         | Integer | String   | Integer          | Integer              |
 
 The application doesn't query the CSV, but instead looks for data in the [`api/`](/api) directory. A Rake task is used to parse the CSV, normalize the data, and build the JSON fragments that will populate the `api/` directory.
 
