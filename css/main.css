@@ -22,6 +22,7 @@ sup {
 /* Comparison Tool base styles */
 
 .comparison a {
+  font-size: 16px;
   text-decoration: none;
   color: #0B6CB2;
 }
@@ -158,7 +159,7 @@ Use with for example: <div class="icon explore"></div>
 /* Main Content */
 
 .comparison .heading {
-  margin: 35px 0 25px 0;
+  margin: 30px 0 20px 0;
   padding: 0;
   font-size: 16px;
   border-bottom: 2px solid #003F72;
@@ -182,11 +183,12 @@ Use with for example: <div class="icon explore"></div>
 
 .comparison .heading.solid.orange {
   background: #C30;
+  margin-bottom: 0;
 }
 
 .comparison .heading.solid.navy {
   background: #003F72;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
   font-style: italic;
 }
 
@@ -211,6 +213,7 @@ Use with for example: <div class="icon explore"></div>
   float: right;
 }
 
+/*
 .comparison .left-sidebar {
   font-style: italic;
   width: 150px;
@@ -226,21 +229,30 @@ Use with for example: <div class="icon explore"></div>
 .comparison .right-content {
   margin-left: 175px;
 }
+*/
 
 /* Forms */
 
 .comparison .form-group {
-  margin-right: 15px;
+  margin-left: 50px;
   margin-bottom: 15px;
-  float: right;
+}
+
+.comparison .form-group.top-aligned label {
+  display: block;
 }
 
 .comparison .form-group label,
 .comparison .form-group span.question {
   margin-right: 10px;
-  float: left;
   font-size: 16px;
   color: #444;
+  margin-bottom: 5px;
+}
+
+.comparison .form-group span.question {
+  display: block;
+  margin-bottom: .25em;
 }
 
 .comparison .form-group input {
@@ -253,13 +265,10 @@ Use with for example: <div class="icon explore"></div>
 
 .comparison .form-group input[type="radio"] {
   margin-right: 10px;
-  float: left;
   color: #444;
 }
 
 .comparison .form-group select {
-  position: relative;
-  top: -4px;
   width: 275px;
   font-size: 16px;
   color: #444;
@@ -277,6 +286,26 @@ Use with for example: <div class="icon explore"></div>
 
 .comparison .form-group .institution-search-label {
   display: none;
+}
+
+.comparison .form-group .info {
+  position: relative;
+  top: 4px;
+}
+
+.comparison #filter-results-btn {
+  margin-bottom: 5px;
+}
+
+.comparison #filter-results-btn a {
+  margin-left: 15px;
+}
+
+.comparison #filter-results-box {
+  display: none;
+  border: 2px solid #bfbfbf;
+  padding: 5px;
+  margin: 0 0 20px 10px;
 }
 
 /* Tables */
@@ -311,7 +340,7 @@ Use with for example: <div class="icon explore"></div>
 }
 
 .comparison table td {
-  padding: 5px 25px;
+  /*padding: 5px 25px;*/
   color: #fff;
 }
 
@@ -324,7 +353,7 @@ Use with for example: <div class="icon explore"></div>
 }
 
 .comparison #benefit-estimator table {
-  background: #C30 url('../img/dollar_sign.png') 3.5% 50% no-repeat;
+  background: #249120 url('../img/dollar_sign.png') 3.5% 50% no-repeat;
 }
 
 .comparison #benefit-estimator table th {
@@ -357,9 +386,90 @@ Use with for example: <div class="icon explore"></div>
   font-style: normal;
 }
 
+
+ /* Benefit Calculator */
+
+.comparison #calculator {}
+
+.comparison #calculator a:focus {
+  outline: 1px dashed #fff;
+}
+
+.comparison #calculator table {
+  background: #249120 url('../img/dollar_sign.png') 3.5% 50% no-repeat;
+}
+
+.comparison #calculator table th {
+  padding-left: 100px;
+  font-weight: bold;
+  width: 35%;
+}
+
+.comparison #calculator td#institution-calculator {
+  padding-left: 100px;
+  font-size: 30px;
+  font-weight: bold;
+}
+.comparison #calculator td#location-calculator {
+  padding-left: 100px;
+}
+.comparison #calculator td#type-calculator {
+  padding-left: 100px;
+  padding-bottom: 20px;
+  font-style: italic;
+}
+
+.comparison #calculator #total-left-to-pay.red {
+  background: red;
+  font-weight: bold;
+  padding: 2px 4px;
+}
+
+.comparison #calculator td#total-year-td {
+  border-left: 2px dashed #fff;
+  border-bottom: 2px dashed #fff;
+  border-top: 2px dashed #fff;
+}
+
+.comparison #calculator td#total-year {
+  border-top: 2px dashed #fff;
+  border-bottom: 2px dashed #fff;
+  border-right: 2px dashed #fff;
+}
+
+.comparison #calculator #calc-paid-to-you-total-row td {
+  padding-bottom: 30px;
+}
+
+.comparison #calculator #calc-out-of-pocket-row td {
+  padding-bottom: 30px;
+}
+
+/* Benefit Estimator / Calculator Toggle */
+
+.comparison .toggle-calc {
+  text-align: center;
+  background: #2A9029;
+  padding: 15px;
+  margin-top: -20px;
+  margin-bottom: 20px;
+}
+
+.comparison .toggle-calc a {
+  background: #404040;
+  color: #fff;
+  width: 500px;
+  padding: 10px;
+  border: 2px solid #fff;
+}
+
 /* Veteran Indicators */
 
 .comparison #veteran-indicators {}
+
+.comparison #veteran-indicators a {
+  font-size: 18px;
+}
 
 .comparison #veteran-indicators a:focus {
   outline: 1px dashed #fff;

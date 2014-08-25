@@ -16,7 +16,7 @@ layout: va
   
   <div class="box">
     <span>EXPLORE<br>YOUR CAREER</span>
-    <a href="http://www.benefits.va.gov/gibill/careerscope.asp" target="_blank">
+    <a href="http://www.benefits.va.gov/gibill/careerscope.asp" onclick="track('Timeline', 'Explore Your Career');" target="_blank">
       <div class="icon">
         <img id="icon-explore" src="img/explore-normal.png" alt="explore your career">
       </div>
@@ -26,7 +26,7 @@ layout: va
   
   <div class="box">
     <span>COMPARE<br>SCHOOLS</span>
-    <a href="http://department-of-veterans-affairs.github.io/gi-bill-comparison-tool/">
+    <a href="#">
       <div class="icon">
         <img id="icon-compare" src="img/compare-hover.png" alt="compare schools">
       </div>
@@ -36,7 +36,7 @@ layout: va
   
   <div class="box">
     <span>CHOOSE<br>A SCHOOL</span>
-    <a href="http://www.benefits.va.gov/gibill/choosing_a_school.asp" target="_blank">
+    <a href="http://www.benefits.va.gov/gibill/choosing_a_school.asp" onclick="track('Timeline', 'Choose a School');" target="_blank">
       <div class="icon">
         <img id="icon-choose" src="img/choose-normal.png" alt="choose a school">
       </div>
@@ -46,7 +46,7 @@ layout: va
   
   <div class="box">
     <span>APPLY FOR<br>GI BILL</span>
-    <a href="https://www.ebenefits.va.gov/ebenefits-portal/ebenefits.portal;EBEN_JSESSIONID=YktHTpRhj1JZ22lTpSNhBgTTXsyrQMvrtRyYMhHKp1PQjDylLzsp!-2006711552!-88833136?_nfpb=true&_nfxr=false&_pageLabel=Vonapp" target="_blank">
+    <a href="https://www.ebenefits.va.gov/ebenefits-portal/ebenefits.portal?_nfpb=true&_nfxr=false&_pageLabel=Vonapp" onclick="track('Timeline', 'Apply for GI Bill');" target="_blank">
       <div class="icon">
         <img id="icon-apply" src="img/apply-normal.png" alt="apply for GI Bill">
       </div>
@@ -56,48 +56,45 @@ layout: va
   
   <div class="box">
     <span>SUCCEED<br>IN SCHOOL</span>
-    <a href="http://www.benefits.va.gov/vocrehab/edu_voc_counseling.asp" target="_blank">
+    <a href="http://www.benefits.va.gov/vocrehab/edu_voc_counseling.asp" onclick="track('Timeline', 'Succeed in School');" target="_blank">
       <div class="icon">
         <img id="icon-succeed" src="img/succeed-normal.png" alt="succeed in school">
       </div>
       <span>Educational<br>Counseling</span>
     </a>
   </div>
-
+  
   <div class="box">
     <span>FIND<br>EMPLOYMENT</span>
-    <a href="https://www.ebenefits.va.gov/ebenefits/jobs" target="_blank">
+    <a href="https://www.ebenefits.va.gov/ebenefits/jobs" onclick="track('Timeline', 'Find Employment');" target="_blank">
       <div class="icon">
         <img id="icon-employ" src="img/employ-normal.png" alt="find employment">
       </div>
-      <span>Career Center</span>
+      <span>Employment Center</span>
     </a>
   </div>
 </div>
 
-<div class="heading solid orange"><h3>GI Bill<sup>&reg;</sup> Comparison Tool Beta</h3></div>
+<div class="heading solid orange"><h3>GI Bill<sup>&reg;</sup> Comparison Tool</h3></div>
 
-<div class="left-sidebar">
-  <h2>Calculate your benefits and research approved programs.</h2>
-</div>
-
+<h2>Calculate your benefits and research approved programs.</h2>
+ 
 <!-- Accessibility documentation for filling out form -->
 <div class="hidden">
   <p>Answer just a few questions about yourself and the school/employer you are considering and you’ll receive an estimate of your GI Bill benefits and some information about the facility’s value and affordability. The only required field for the comparison tool to work is the school/employer name. For more information about how the tool works, visit <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp" target="_blank">this link</a>. For more information about accessibility features visit <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#accessibility" target="_blank">this link.</a></p>
 </div>
 
-<div class="right-content">
-
+<!-- <div class="right-content"> -->
+  
   <!-- ================================================== -->
   <!--                 Eligibility Section                -->
   <!-- ================================================== -->
-
+  
   <div class="heading solid navy"><h3>Eligibility</h3></div>
-
+  
   <!-- Cumulative Post 9-11 Active Duty Service -->
-  <div class="form-group">
-    <label for="cumulative-service">Cumulative Post 9-11 Active Duty Service:</label>
-    
+  <div class="form-group top-aligned">
+    <label for="cumulative-service">Cumulative Post 9-11 Active Duty Service: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#cumulativeservice" onclick="track('Tool Tips', 'Eligibility / Cumulative Service');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about cumulative service." title="Click here for more information about cumulative service."></a></label>
     <select id="cumulative-service" name="Cumulative Post 9-11 Active Duty Service" alt="Select amount of cumulative Post 9-11 Active Duty Service">
       <option value="1.0">36+ months: 100% (includes BASIC)</option>
       <option value="0.9">30 months: 90% (includes BASIC)</option>
@@ -110,14 +107,11 @@ layout: va
       <option value="1.0">GYSGT Fry Scholarship: 100%</option>
       <option value="service discharge">Service-Connected Discharge: 100%</option>
     </select>
-    
-    <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#cumulativeservice" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about cumulative service." title="Click here for more information about cumulative service."></a>
   </div>
-
+  
   <!-- Military Status -->
-  <div class="form-group">
-    <label for="military-status">Military Status:</label>
-    
+  <div class="form-group top-aligned">
+    <label for="military-status">Military Status: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#militarystatus" onclick="track('Tool Tips', 'Eligibility / Military Status');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
     <select id="military-status" name="Military Status" alt="Select military status">
       <option value="veteran">Veteran</option>
       <option value="active duty">Active Duty</option>
@@ -125,52 +119,143 @@ layout: va
       <option value="spouse">Spouse</option>
       <option value="child">Child</option>
     </select>
-    
-    <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#militarystatus" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a>
   </div>
-
+  
   <!-- Spouse on Active Duty -->
   <div id="spouse-active-duty-form" class="form-group">
     <span class="question">Is your husband or wife on active duty?</span>
-      
+    
     <label class="radio" for="spouse-active-duty-yes">Yes</label>
     <input id="spouse-active-duty-yes" name="Spouse Active Duty" type="radio" value="yes">
     
     <label class="radio" for="spouse-active-duty-no">No</label>
     <input id="spouse-active-duty-no" name="Spouse Active Duty" type="radio" value="no" checked>
   </div>
-
+  
   <div class="clear"></div>
-
+  
   <!-- ================================================== -->
   <!--       School / Employer Information Section        -->
   <!-- ================================================== -->
-
+  
+  <!-- School Name Search -->
   <div class="heading solid navy"><h3>School / Employer Information</h3></div>
-
-  <div class="form-group">
+  
+  <div class="form-group" style="float:left;">
     <div class="ui-widget">
       <label class="institution-search-label" for="institution-search">Enter a school or employer name to search:</label>
-      <input id="institution-search" placeholder="Search for a School or Employer" title="Enter school/employer name"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#schoolname" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about selecting a school/employer." title="Click here for more information about selecting a school/employer"></a>
+      <input id="institution-search" placeholder="Search by School or Employer Name" title="Enter school/employer name"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#schoolname" onclick="track('Tool Tips', 'Institution Search');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about selecting a school/employer." title="Click here for more information about selecting a school/employer"></a>
     </div>
   </div>
+  
+  <!--
+  <div id="filter-results-btn">
+    <a href="javascript:toggleFilterResults();">Narrow Results ▾</a>
+  </div>
+  
+  <div id="filter-results-box">
 
+    <div class="clear"></div>
+    
+    <div class="form-group top-aligned">
+      <label for="filter-institution-type">Institution Type:</label>
+      <select id="filter-institution-type" name="" alt="">
+        <option value="school" selected="selected">School</option>
+        <option value="ojt">Employer</option>
+      </select>
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="form-group top-aligned">
+      <label for="filter-state">State:</label>
+      <select id="filter-state" name="" alt="">
+        <option value="" selected="selected">Select a State</option>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="DC">District Of Columbia</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
+        <option value="foreign">Foreign</option>
+      </select>
+    </div>
+  
+  </div>
+  -->
+  
+  <!-- Advanced School Search -->
+  <!--
+  <div id="advanced-search" class="form-group">
+    <button type="button" onclick="alert('Fix Me!')">Find Approved Schools / Employers</button>
+  </div>
+  -->
+  
+  <div class="clear"></div>
+  
+  <!-- Online classes -->
   <div id="online-classes" class="form-group">
     <span class="question">Taking all online classes?</span>
     
-    <label class="radio" for="online-yes">Yes</label>
-    <input id="online-yes" name="Online Courses" type="radio" value="yes">
+    <label class="radio" for="online-classes-yes">Yes</label>
+    <input id="online-classes-yes" name="Online Courses" type="radio" value="yes">
     
-    <label class="radio" for="online-no">No</label>
-    <input id="online-no" name="Online Courses" type="radio" value="no" checked>
+    <label class="radio" for="online-classes-no">No</label>
+    <input id="online-classes-no" name="Online Courses" type="radio" value="no" checked>
   </div>
-
+  
   <div class="clear"></div>
-
+  
   <!-- ================================================== -->
   <!--                  Benefit Estimator                 -->
   <!-- ================================================== -->
-
+  
+  <a name="benefit-estimator"></a>
   <div id="benefit-estimator">
     
     <div class="heading solid navy table"><h3>Benefit Estimator</h3></div>
@@ -188,62 +273,366 @@ layout: va
           <td id="type" colspan="2" class="normal"></td>
         </tr>
         <tr>
-          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuitionfees" target="_blank" alt="Click here for more information about the tuition/fees benefit." title="Click here for more information the tuition/fees benefit.">Tuition / Fees:</a></th>
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuitionfees" onclick="track('Tool Tips', 'Benefit Estimator / Tuition Fees');" target="_blank" alt="Click here for more information about the tuition/fees benefit." title="Click here for more information the tuition/fees benefit.">Tuition / Fees:</a></th>
           <td id="tuition-fees">$ / year</td>
         </tr>
         <tr>
-          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#housingallowance" target="_blank" alt="Click here for more information about the housing allowance." title="Click here for more information the housing allowance.">Housing Allowance:</a></th>
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#housingallowance" onclick="track('Tool Tips', 'Benefit Estimator / Housing Allowance');" target="_blank" alt="Click here for more information about the housing allowance." title="Click here for more information the housing allowance.">Housing Allowance:</a></th>
           <td id="housing-allowance">$ / month</td>
         </tr>
         <tr>
-          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#bookstipend" target="_blank" alt="Click here for more information about the book stipend." title="Click here for more information about the book stipend.">Book Stipend:</a></th>
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#bookstipend" onclick="track('Tool Tips', 'Benefit Estimator / Book Stipend');" target="_blank" alt="Click here for more information about the book stipend." title="Click here for more information about the book stipend.">Book Stipend:</a></th>
           <td id="book-stipend">$ / year</td>
         </tr>
         <tr>
-          <th id="voc-rehab" colspan="2">FYI: <a href="http://www.vba.va.gov/bln/vre/" target="_blank" alt="Click here for more information." title="Click here for more information.">Voc Rehab</a> may provide more additional education benefits.</th>
+          <th id="voc-rehab" colspan="2">FYI: <a href="http://www.vba.va.gov/bln/vre/" onclick="track('Tool Tips', 'Benefit Estimator / Voc Rehab');" target="_blank" alt="Click here for more information." title="Click here for more information.">Voc Rehab</a> may provide more additional education benefits.</th>
         </tr>
         <tr><td colspan="2"></td></tr>
       </tbody>
     </table>
     
   </div>
-
+  
+  
   <!-- ================================================== -->
-  <!--                  Veteran Indicators                -->
+  <!--                     Calculator                     -->
   <!-- ================================================== -->
-
-  <div id="veteran-indicators">
     
-    <div class="heading solid navy table"><h3>Veteran Indicators<span class="source"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#sourcedata" target="_blank" alt="Click here for more information." title="Click here for more information.">Source</a></span></h3></div>
+    <a name="calculator"></a>
+    <div id="calculator">
+    
+    <!-- ================================================== -->
+    <!--               Tuition / Fees Section               -->
+    <!-- ================================================== -->
+    
+    <div id="tuition-fees-section">
+      
+      <div class="heading solid navy"><h3>Tuition / Fees</h3></div>
+      
+      <!-- In-state Residency -->
+      <div id="in-state" class="form-group">
+        <span class="question">In-state student? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#in_state_residency" onclick="track('Tool Tips', 'Calculator / In-State Student');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></span>
+        
+        <label class="radio" for="in-state-yes">Yes</label>
+        <input id="in-state-yes" name="In-state" type="radio" value="yes" checked>
+        
+        <label class="radio" for="in-state-no">No</label>
+        <input id="in-state-no" name="In-state" type="radio" value="no">
+      </div>
+      
+      <div class="clear"></div>
+      
+      <!-- Tuition Fees -->
+      <div class="form-group top-aligned">
+        <label for="tuition-fees-input">Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuition_fees_input" onclick="track('Tool Tips', 'Calculator / Tuition Fees');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+        <input id="tuition-fees-input" type="text" value="$0" name="Tuition Fees" alt="Tuition Fees">
+      </div>
+      
+      <div class="clear"></div>
+      
+      <!-- In-State Tuition Fees -->
+      <div id="in-state-tuition-fees-form" class="form-group top-aligned">
+        <label for="in-state-tuition-fees">In-state Tuition / Fees (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_receiving" onclick="track('Tool Tips', 'Calculator / In-State Tuition Fees');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+        <input id="in-state-tuition-fees" type="text" value="$0" name="In-state Tuition Fees" alt="In-state Tuition Fees">
+      </div>
+      
+      <div class="clear"></div>
+      
+      <!-- Yellow Ribbon Status -->
+      <div id="yellow-ribbon-recipient-form" class="form-group">
+        <span class="question">Receiving Yellow Ribbon? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_from_school" onclick="track('Tool Tips', 'Calculator / Receiving Yellow Ribbon');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></span>
+        
+        <label class="radio" for="yellow-ribbon-recipient-yes">Yes</label>
+        <input id="yellow-ribbon-recipient-yes" name="Receiving Yellow Ribbon" type="radio" value="yes">
+        
+        <label class="radio" for="yellow-ribbon-recipient-no">No</label>
+        <input id="yellow-ribbon-recipient-no" name="Receiving Yellow Ribbon" type="radio" value="no" checked>
+      </div>
+      
+      <div class="clear"></div>
+      
+      <!-- Yellow Ribbon Amount -->
+      <div id="yellow-ribbon-amount-form" class="form-group top-aligned">
+        <label for="yellow-ribbon-amount">Yellow Ribbon Amount From School (/year): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellow_ribbon_from_school" onclick="track('Tool Tips', 'Calculator / Yellow Ribbon Amount');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label> 
+        <input id="yellow-ribbon-amount" type="text" value="$0" name="Yellow Ribbon Amount From School" alt="Yellow Ribbon Amount From School">
+      </div>
+      
+      <div class="clear"></div>
+      
+      <!-- Yellow Ribbon Rates Link -->
+      <div id="yellow-ribbon-rates-link" class="form-group"></div>
+      
+      <div class="clear"></div>
+      
+      <!-- Scholarships -->
+      <div id="scholar-form" class="form-group top-aligned">
+        <label for="scholar">Scholarships (not Pell): <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#scholarships" onclick="track('Tool Tips', 'Calculator / Scholarships');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+        <input id="scholar" type ="text" value="$0" name="Scholarships (not Pell)" alt="How much are you receiving in scholarships and not Pell grants">        
+      </div>
+      
+      <!-- Military Tuition Assistance -->
+      <div id="tuition-assist-form" class="form-group top-aligned">
+        <label for="tuition-assist">Military Tuition Assistance: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#military_tuition_assist" onclick="track('Tool Tips', 'Calculator / Military Tuition Assistance');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+        <input id="tuition-assist" type ="text" value="$0" name="Military Tuition Assistance" alt="How much are you receiving in military tuition assistance">
+      </div>
+      
+      <div class="clear"></div>
+    
+    </div>
+    
+    <!-- ================================================== -->
+    <!--                 Enrollment Section                 -->
+    <!-- ================================================== -->
+    
+    <div id="enrollment-section">
+      
+      <div class="heading solid navy"><h3>Enrollment</h3></div>
+      
+      <!-- Rate of Pursuit -->
+      <div id="enrolled-form" class="form-group top-aligned">
+        <label for="enrolled">Enrolled: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit" onclick="track('Tool Tips', 'Calculator / Enrolled');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+        <select id="enrolled" name="Enrolled" alt="Select your enrollment level">
+          <option value="1.0">Full Time</option>
+          <option value="0.8">¾ Time</option>
+          <option value="0.6">More than ½ time</option>
+          <option value="0">½ Time or less</option>
+        </select>
+      </div>
+      
+      <div class="clear"></div>
+      
+      <!-- Rate of Pursuit for OJT -->
+      <div id="working-form" class="form-group top-aligned">
+        <label for="working">Will be working: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#rate_of_pursuit_ojt" onclick="track('Tool Tips', 'Calculator / Will Be Working');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+        <select id="working" name="Will be working" alt="Select how much you will be working">
+          <option value="30">30+ hrs / week</option>
+          <option value="28">28 hrs / week</option>
+          <option value="26">26 hrs / week</option>
+          <option value="24">24 hrs / week</option>
+          <option value="22">22 hrs / week</option> 
+          <option value="20">20 hrs / week</option>
+          <option value="18">18 hrs / week</option>
+          <option value="16">16 hrs / week</option>
+          <option value="14">14 hrs / week</option>
+          <option value="12">12 hrs / week</option>
+          <option value="10">10 hrs / week</option>
+          <option value="8">8 hrs / week</option>
+          <option value="6">6 hrs / week</option>
+          <option value="4">4 hrs / week</option> 
+          <option value="2">2 hrs / week</option>
+        </select>
+      </div>
+      
+      <div class="clear"></div>
+      
+      <!-- School Calendar -->
+      <div id="calendar-form" class="form-group top-aligned">
+        <label for="calendar">School Calendar: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / School Calendar');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+        <select id="calendar" name="School Calendar" alt="Select type of school calendar">
+          <option value="semesters">Semesters</option>
+          <option value="quarters">Quarters</option>
+          <option value="nontraditional">Non-Traditional</option>
+        </select>
+      </div>
+      
+      <div class="clear"></div>
+      
+      <!-- Number of non-traditional terms / year -->
+      <div id="number-non-traditional-terms-form" class="form-group top-aligned">
+        <label for="number-non-traditional-terms">How many terms / year? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'How Many Terms');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+        <select id="number-non-traditional-terms" name="How many terms / year?" alt="Select how many terms / year?">
+          <option value="3">Three</option>
+          <option value="2" selected>Two</option>
+          <option value="1">One</option>
+        </select>
+      </div>
+      
+      <div class="clear"></div>
+      
+      <!-- Length of Non Traditional Terms -->
+      <div id="length-non-traditional-terms-form" class="form-group top-aligned">
+        <label for="length-non-traditional-terms">How long is each term? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#school_calendar" onclick="track('Tool Tips', 'Calculator / Non-Traditional Term Length');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+        <select id="length-non-traditional-terms" name="How long is each term?" alt="Select how long is each term?">
+          <option value="1">1 month</option>
+          <option value="2">2 months</option>
+          <option value="3" selected>3 months</option>
+          <option value="4">4 months</option>
+          <option value="5">5 months</option>
+          <option value="6">6 months</option>
+          <option value="7">7 months</option>
+          <option value="8">8 months</option>
+          <option value="9">9 months</option>
+          <option value="10">10 months</option>
+          <option value="11">11 months</option>
+          <option value="12">12 months</option>
+        </select>
+      </div>
+      
+      <div class="clear"></div>
+      
+      <!-- Eligible for Kicker -->
+      <div id="kicker-elig-form" class="form-group">
+        <span class="question">Eligible for Kicker: <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#kicker" onclick="track('Tool Tips', 'Calculator / Eligible for Kicker');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></span>
+        
+        <label class="radio" for="kicker-elig-yes">Yes</label>
+        <input id="kicker-elig-yes" name="Kicker Eligible" type="radio" value="yes">
+        
+        <label class="radio" for="kicker-elig-no">No</label>
+        <input id="kicker-elig-no" name="Kicker Eligible" type="radio" value="no" checked>
+      </div>
+      
+      <div class="clear"></div>
+      
+      <!-- Kicker is worth -->
+      <div id="kicker-form" class="form-group top-aligned">
+        <label for="kicker">How much is your kicker? <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#kicker" onclick="track('Tool Tips', 'Calculator / How Much is Kicker');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information." title="Click here for more information."></a></label>
+        <input id="kicker" type ="text" value="$200" name="How much is your kicker?" alt="Tell us how much is your kicker was for?">
+      </div>
+      
+      <div class="clear"></div>
+      
+    </div>
+    
+    <div class="heading solid navy table"><h3>GI Bill Calculator</h3></div>
     
     <table class="dark-background">
       <tbody>
         <tr><td colspan="2"></td></tr>
         <tr>
-          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#principles" target=" _blank" alt="Click here for more information." title="Click here for more information.">Principles of Excellence:</a></th>
-          <td id="poe"></td>
+          <td id="institution-calculator" colspan="5"></td>
         </tr>
         <tr>
-          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellowribbon" target="_blank" alt="Click here for more information." title="Click here for more information.">Yellow Ribbon: <img src="img/yellow_ribbon.gif" class="yellow-ribbon" alt="Yellow ribbon icon"></a></th>
+          <td id="location-calculator" colspan="5" class="normal"></td>
+        </tr>
+        <tr>
+          <td id="type-calculator" colspan="5" class="normal"></td>
+        </tr>
+        <tr style="font-weight:bold;">
+          <th></th>
+          <td id="term1">Fall</td>
+          <td id="term2">Spring</td>
+          <td id="term3"></td>
+          <td id="term4">Total</td>
+        </tr>
+        <tr>
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#housingallowance" onclick="track('Tool Tips', 'Benefit Calculator / Housing Allowance');" target="_blank" alt="Click here for more information about the housing allowance.">Housing Allowance:</a></th>
+          <td id="housing-allow-term-1">$0 / month</td>
+          <td id="housing-allow-term-2">$0 / month</td>
+          <td id="housing-allow-term-3"></td>
+          <td id="housing-allow-total">$0 / yr</td>
+        </tr>
+        <tr>
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#bookstipend" onclick="track('Tool Tips', 'Benefit Calculator / Book Stipend');" target="_blank" alt="Click here for more information about the book stipend.">Book Stipend:</a></th>
+          <td id="book-stipend-term-1">$0 / term</td>
+          <td id="book-stipend-term-2">$0 / term</td>
+          <td id="book-stipend-term-3"></td>
+          <td id="book-stipend-total">$0 / yr</td>
+        </tr>
+        <tr id="calc-paid-to-you-total-row" style="font-size:25px;font-weight:bold;">
+          <th></th>
+          <td id="total-paid-to-you-td" colspan="2" class="normal" style="border-top: 2px solid #fff;text-align:right;"><b>Paid to You:</b></td>
+          <td id="total-paid-to-you" style="border-top: 2px solid #fff;">$0</td>
+        </tr>
+        <tr id="calc-tuition-fees-row">
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#tuitionfees" onclick="track('Tool Tips', 'Benefit Calculator / Tuition Fees');" target="_blank" alt="Click here for more information about the tuition/fees benefit.">Tuition / Fees:</a></th>
+          <td id="tuition-fees-term-1">$0 / term</td>
+          <td id="tuition-fees-term-2">$0 / term</td>
+          <td id="tuition-fees-term-3"></td>
+          <td id="tuition-fees-total">$0 / yr</td>
+        </tr>
+        <tr id="calc-yellow-ribbon-row">
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellowribbon" onclick="track('Tool Tips', 'Benefit Calculator / Yellow Ribbon (School)');" target="_blank" alt="Click here for more information.">Yellow Ribbon (School):</a></th>
+          <td id="yr-ben-term-1">$0 / term</td>
+          <td id="yr-ben-term-2">$0 / term</td>
+          <td id="yr-ben-term-3"></td>
+          <td id="yr-ben-total">$0 / yr</td>
+        </tr>
+        <tr id="calc-yellow-ribbon-va-row">
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellowribbon" onclick="track('Tool Tips', 'Benefit Calculator / Yellow Ribbon (VA)');" target="_blank" alt="Click here for more information.">Yellow Ribbon (VA):</a></th>
+          <td id="yr-ben-term-va-1">$0 / term</td>
+          <td id="yr-ben-term-va-2">$0 / term</td>
+          <td id="yr-ben-term-va-3"></td>
+          <td id="yr-ben-va-total">$0 / yr</td>
+        </tr>
+        <tr id="calc-paid-to-school-total-row" style="font-size:25px;font-weight:bold;">
+          <th></th>
+          <td id="paid-to-school-td" colspan="2" style="border-top: 2px solid #fff;text-align:right;"><b>Paid to School:</b></td>
+          <td id="total-paid-to-school" style="border-top: 2px solid #fff;">$0</td>
+        <tr id="calc-tuition-fees-scholarship-row">
+          <th></th>
+          <td id="tuition-fees-scholarship-td" colspan="2" style="text-align:right;"><b>Your Scholarships:</b></td>
+          <td id="total-tuition-fees-scholarships">$0</td>
+        <tr id="calc-tuition-fees-charged-row">
+          <th></th>
+          <td id="tuition-fees-charged-td" colspan="2" style="text-align:right;"><b>Tuition & Fees Owed:</b></td>
+          <td id="total-tuition-fees-charged">$0</td>
+        <tr id="calc-out-of-pocket-row">
+          <th></th>
+          <td id="total-left-to-pay-td" colspan="2" style="text-align:right;"><b>Out of Pocket:</b></td>
+          <td><span id="total-left-to-pay">$0</span></td>
+        <tr id="calc-term-total-row" style="font-size:25px;font-weight:bold;">
+          <th></th>
+          <td id="total-year-td" colspan="2" class="normal" style="text-align:right;"><b>Total Post-9/11 GI Bill Benefits</b></td>
+          <td id="total-year" class="normal">$0 / yr</td>
+        <tr><td colspan="4"></td></tr>
+      </tbody>
+    </table>
+    
+  </div>
+  
+  <div id="calculate-benefits-btn" class="toggle-calc">
+    <a href="javascript:toggleCalc()" onclick="GIBComparisonTool.trackOpenCalculator();">How much am I going to get?</a>
+  </div>
+  
+  <!-- ================================================== -->
+  <!--                  Veteran Indicators                -->
+  <!-- ================================================== -->
+  
+  <div id="veteran-indicators">
+    
+    <div class="heading solid navy table"><h3>Veteran Indicators<span class="source"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#sourcedata" onclick="track('Tool Tips', 'Vet Indicators / Source');" target="_blank" alt="Click here for more information." title="Click here for more information.">Source</a></span></h3></div>
+    
+    <table class="dark-background">
+      <tbody>
+        <tr><td colspan="2"></td></tr>
+        <tr>
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#gibillben" onclick="track('Tool Tips', 'Vet Indicators / GI Bill Beneficiaries');" target="_blank" alt="Click here for more information." title="Click here for more information.">GI Bill Beneficiaries:</a></th>
+          <td id="gibill"></td>
+        </tr>
+        <tr>
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#student_veterans_group" onclick="track('Tool Tips', 'Vet Indicators / Student Veterans Group');" target="_blank" alt="Click here for more information." title="Click here for more information.">Student Veterans Group:</a></th>
+          <td id="student-veterans"></td>
+        </tr>
+        <tr>
+        <tr>
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#yellowribbon" onclick="track('Tool Tips', 'Vet Indicators / Yellow Ribbon');" target="_blank" alt="Click here for more information." title="Click here for more information.">Yellow Ribbon: <img src="img/yellow_ribbon.gif" class="yellow-ribbon" alt="Yellow ribbon icon"></a></th>
           <td id="yr"></td>
         </tr>
         <tr>
-          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#gibillben" target="_blank" alt="Click here for more information." title="Click here for more information.">GI Bill Beneficiaries:</a></th>
-          <td id="gibill"></td>
+          <th><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#principles" onclick="track('Tool Tips', 'Vet Indicators / POE');" target=" _blank" alt="Click here for more information." title="Click here for more information.">Principles of Excellence:</a></th>
+          <td id="poe"></td>
+        </tr>
+        <tr id="vet-success-row">
+          <th><a href="https://www.ebenefits.va.gov/ebenefits/vsoc" onclick="track('Tool Tips', 'Vet Indicators / VetSuccess');" target=" _blank" alt="Click here for more information." title="Click here for more information.">VetSuccess on Campus:</a></th>
+          <td id="vet-success"></td>
+        </tr>
+        <tr id="eight-keys-row">
+          <th><a href="http://www.ed.gov/veterans-and-military-families/8-keys-success-sites" onclick="track('Tool Tips', 'Vet Indicators / 8 Keys');" target=" _blank" alt="Click here for more information." title="Click here for more information.">8 Keys to Veterans Success:</a></th>
+          <td id="eight-keys">Yes</td>
         </tr>
         <tr><td colspan="2"></td></tr>
       </tbody>
     </table>
-
+    
   </div>
-
+  
   <!-- ================================================== -->
   <!--      School Indicators (Non-Veteran Specific)      -->
   <!-- ================================================== -->
-
+  
   <div id="school-indicators">
     
-    <div class="heading solid navy table"><h3>School Indicators, Non-Veteran Specific<span class="source"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#sourcedata" target="_blank" alt="Click here for more information." title="Click here for more information.">Source</a></span></h3></div>
+    <div class="heading solid navy table"><h3>School Indicators, Non-Veteran Specific<span class="source"><a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#sourcedata" onclick="track('Tool Tips', 'School Indicators / Source');" target="_blank" alt="Click here for more information." title="Click here for more information.">Source</a></span></h3></div>
     
     <table>
       <tbody>
@@ -252,28 +641,28 @@ layout: va
           
             <div class="box">
               <div class="description">
-                <h2>Graduation Rates<a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#gradrate" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about graduation rates." title="Click here for more information about graduation rates."></a></h2>
+                <h2>Graduation Rates<a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#gradrate" onclick="track('Tool Tips', 'School Indicators / Graduation Rates');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about graduation rates." title="Click here for more information about graduation rates."></a></h2>
                 <p>Percent of full-time students that graduated within 150% of the expected time for completion. Graduation rate data are based on undergraduate students who enrolled full-time and have never enrolled in college before. This may not represent all undergraduates that attend this institution.</p>
               </div>
               <div>
                 <div id="graduation-rates-chart"></div>
               </div>
             </div>
-
+            
             <div class="box">
               <div class="description">
-                <h2>Loan Default Rates<a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#CDR" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about default rates." title="Click here for more information about default rates."></a></h2>
+                <h2>Loan Default Rates<a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#CDR" onclick="track('Tool Tips', 'School Indicators / Loan Default Rates');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about default rates." title="Click here for more information about default rates."></a></h2>
                 <p>Percent of student borrowers that failed to repay their Federal student loans within three years of entering repayment.</p>
               </div>
               <div>
                 <div id="loan-default-rates-chart"></div>
               </div>
             </div>
-
+            
             <div class="box">
               <div class="description">
-                <h2>Median Borrowing<a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#borrowing" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about median borrowing." title="Click here for more information about median borrowing."></a></h2>
-                <p>Families who borrow typically take out this amount in Federal loans for a student's undergraduate study. Your borrowing may be different. <a href="http://studentaid.ed.gov/repay-loans/understand/plans" target="_blank">Learn about repayment options.</a></p>
+                <h2>Median Borrowing<a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#borrowing" onclick="track('Tool Tips', 'School Indicators / Median Borrowing');" target="_blank"><img class="info" src="img/info.jpg" alt="Click here for more information about median borrowing." title="Click here for more information about median borrowing."></a></h2>
+                <p>Families who borrow typically take out this amount in Federal loans for a student's undergraduate study. Your borrowing may be different. <a href="http://studentaid.ed.gov/repay-loans/understand/plans" onclick="track('Tool Tips', 'School Indicators / Learn About Repayment');" target="_blank">Learn about repayment options &raquo;</a></p>
               </div>
               <div>
                 <div id="median-borrowing-chart"></div>
@@ -290,15 +679,15 @@ layout: va
     </table>
     
   </div>
-
+  
   <!-- ================================================== -->
   <!--          More Information About the Tool           -->
   <!-- ================================================== -->
-
+  
   <div class="about-this-tool">
-    <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp" target="_blank">About this Tool</a>
-    <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#feedback" target="_blank">Feedback</a>
-    <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#accessibility" target="_blank">Accessibility</a>
+    <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp" onclick="track('Tool Tips', 'About this Tool');" target="_blank">About this Tool</a>
+    <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#feedback" onclick="track('Tool Tips', 'Feedback');" target="_blank">Feedback</a>
+    <a href="http://www.benefits.va.gov/gibill/comparison_tool/about_this_tool.asp#accessibility" onclick="track('Tool Tips', 'Accessibility');" target="_blank">Accessibility</a>
   </div>
-
-</div>
+  
+<!-- </div> -->

@@ -1,3 +1,4 @@
+_data/_*
 _site/
 _tmp/
 *.DS_Store
