@@ -1,6 +1,6 @@
 {
   "facility_code": "24901150",
-  "institution": "INSTITUTE OF BUSINESS AND MEDICAL CAREERS - CHEYENNE",
+  "institution": "IBMC COLLEGE",
   "city": "CHEYENNE",
   "state": "WY",
   "zip": "82009",
@@ -16,7 +16,7 @@
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
-  "eight_keys": null,
+  "eight_keys": true,
   "correspondence": null,
   "flight": null,
   "grad_rate": 80.2,

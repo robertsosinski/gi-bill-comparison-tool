@@ -1,6 +1,6 @@
 {
   "facility_code": "25200316",
-  "institution": "HAYS ACADEMY OF HAIR DESIGN",
+  "institution": "HAYS ACADEMY OF HAIR DESIGN-HAYS",
   "city": "HAYS",
   "state": "KS",
   "zip": "67601",
@@ -26,7 +26,7 @@
   "avg_stu_loan_debt_rank": 1627,
   "indicator_group": 5,
   "salary": null,
-  "calendar": "semesters",
+  "calendar": "nontraditional",
   "tuition_in_state": null,
   "tuition_out_of_state": null
 }
