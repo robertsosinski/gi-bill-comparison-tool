@@ -12,7 +12,7 @@
   "poe": true,
   "yr": true,
   "gibill": 123,
-  "student_veteran": null,
+  "student_veteran": true,
   "student_veteran_link": null,
   "vetsuccess_name": null,
   "vetsuccess_email": null,
