@@ -96,9 +96,9 @@ var InstitutionData = (function(data, index) {
 
   var getElement = function(id, opt_parentId) {
     if (opt_parentId) {
-      return $(opt_parentId + '-' + (index + 1) + ' ' + id);
+      return $(opt_parentId + '-' + index + ' ' + id);
     } else {
-      return $(id + '-' + (index + 1));
+      return $(id + '-' + index);
     }
   };
 
@@ -191,6 +191,7 @@ var InstitutionData = (function(data, index) {
   this.updateHtml = function(globalFormData) {
     console.log('Updating HTML for institution ' + index + ': ' +
         institution.institution);
+    $('#benefit-estimator-' + index + ' table').removeClass('inactive');
     getElement('#institution', '#benefit-estimator').html(institution.institution);
     getElement('#location', '#benefit-estimator').html(calculated.location);
     getElement('#type', '#benefit-estimator').html(calculated.institution_type_display);
@@ -496,9 +497,9 @@ var InstitutionData = (function(data, index) {
     // School Indicators
     if (institution.indicator_group === null ||
         institution.indicator_group == 4) {
-      getElement('#graduation-rates-chart', '#school-indicators').html('<p>Not Reported</p>');
-      getElement('#loan-default-rates-chart', '#school-indicators').html('<p>Not Reported</p>');
-      getElement('#median-borrowing-chart', '#school-indicators').html('<p>Not Reported</p>');
+      getElement('#graduation-rates-chart').html('<p>Not Reported</p>');
+      getElement('#loan-default-rates-chart').html('<p>Not Reported</p>');
+      getElement('#median-borrowing-chart').html('<p>Not Reported</p>');
 
     // Draw the charts
     } else {
@@ -550,7 +551,7 @@ var InstitutionData = (function(data, index) {
     }
 
     var attr = 'Graduation rate is ' + gradCategory + '.';
-    getElement('#graduation-rates-chart', '#school-indicators').attr({
+    getElement('#graduation-rates-chart').attr({
       alt: attr,
       title: attr
     });
@@ -584,8 +585,8 @@ var InstitutionData = (function(data, index) {
         break;
     }
 
-    getElement('#graduation-rates-chart', '#school-indicators').empty();
-    var canvas = Raphael('graduation-rates-chart', 300, 100);
+    getElement('#graduation-rates-chart').empty();
+    var canvas = Raphael('graduation-rates-chart-' + index, 300, 100);
 
     // Draw static elements
     canvas.add([
@@ -677,14 +678,14 @@ var InstitutionData = (function(data, index) {
   var drawLoanDefaultRates = function () {
     var attr = 'Default rate is ' + institution.default_rate +
                '%, compared to the national average of ' + CDRAVG + '%.';
-    getElement('#loan-default-rates-chart', '#school-indicators').attr({
+    getElement('#loan-default-rates-chart').attr({
       alt: attr,
       title: attr
     });
 
-    getElement('#loan-default-rates-chart', '#school-indicators').empty();
+    getElement('#loan-default-rates-chart').empty();
 
-    var canvas = Raphael('loan-default-rates-chart', 300, 200);
+    var canvas = Raphael('loan-default-rates-chart-' + index, 300, 200);
 
     var schoolBarHeight = (institution.default_rate / 100) * 145,
         nationalBarHeight = (CDRAVG / 100) * 145;
@@ -812,7 +813,7 @@ var InstitutionData = (function(data, index) {
     }
 
     var attr = 'Median Borrowing is ' + loanCategory + '.';
-    getElement('#median-borrowing-chart', '#school-indicators').attr({
+    getElement('#median-borrowing-chart').attr({
       alt: attr,
       title: attr
     });
@@ -838,8 +839,8 @@ var InstitutionData = (function(data, index) {
         break;
     }
 
-    getElement('#median-borrowing-chart', '#school-indicators').empty();
-    var canvas = Raphael('median-borrowing-chart', 300, 150);
+    getElement('#median-borrowing-chart').empty();
+    var canvas = Raphael('median-borrowing-chart-' + index, 300, 150);
 
     canvas.add([
       // Low wedge
@@ -960,19 +961,19 @@ var InstitutionData = (function(data, index) {
       if (institution.grad_rate !== null) {
         drawGraduationRate();
       } else {
-        getElement('#graduation-rates-chart', '#school-indicators').html('<p>Not Reported</p>');
+        getElement('#graduation-rates-chart').html('<p>Not Reported</p>');
       }
 
       if (institution.default_rate !== null) {
         drawLoanDefaultRates();
       } else {
-        getElement('#loan-default-rates-chart', '#school-indicators').html('<p>Not Reported</p>');
+        getElement('#loan-default-rates-chart').html('<p>Not Reported</p>');
       }
 
       if (institution.avg_stu_loan_debt !== null) {
         drawMedianBorrowingChart();
       } else {
-        getElement('#median-borrowing-chart', '#school-indicators').html('<p>Not Reported</p>');
+        getElement('#median-borrowing-chart').html('<p>Not Reported</p>');
       }
     }
 
@@ -983,7 +984,7 @@ var InstitutionData = (function(data, index) {
       "' onclick=\"track('Tool Tips', 'School Indicators / College Navigator');\" target='newtab'>More information about your school &raquo;</a></p>");
   };
 
-  this.updateValues = function() {
+  this.updateValues = function(globalFormData) {
     /*
      * Format location of the institution
      */
@@ -1069,11 +1070,11 @@ var InstitutionData = (function(data, index) {
      * Calculate the tier
      */
     var getTier = function () {
-      if (formData.cumulative_service == 'service discharge') {
+      if (globalFormData.cumulative_service == 'service discharge') {
         calculated.tier = 1;
         calculated.service_discharge = true;
       } else {
-        calculated.tier = parseFloat(formData.cumulative_service);
+        calculated.tier = parseFloat(globalFormData.cumulative_service);
       }
     };
 
@@ -1987,7 +1988,7 @@ var InstitutionData = (function(data, index) {
     // An institution must be selected to proceed
     if (!formData.facility_code) { return; }
 
-    var index = formData.index;
+    var index = formData.index + 1;
     var institution = selectedInstitutions[index] || {};
     var institutionData = institution.data || {};
     if (formData.facility_code == institutionData.facility_code) {
@@ -2031,10 +2032,10 @@ var InstitutionData = (function(data, index) {
     console.log(calculated);
 
     // Write results to the page
-    $('#benefit-estimator table').removeClass('inactive');
 
     for (var i = 0; i < selectedInstitutions.length; ++i) {
       if (selectedInstitutions[i]) {
+          selectedInstitutions[i].updateValues(formData);
           selectedInstitutions[i].updateHtml(formData);
       }
     }
