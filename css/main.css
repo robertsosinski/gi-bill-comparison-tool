@@ -45,6 +45,7 @@ sup {
 .comparison h2 {
   padding: 0;
   font-size: 22px;
+  padding-left: 20px;
 }
 
 .comparison p {
@@ -234,7 +235,7 @@ Use with for example: <div class="icon explore"></div>
 /* Forms */
 
 .comparison .form-group {
-  margin-left: 50px;
+  /*margin-left: 50px;*/
   margin-bottom: 15px;
 }
 
@@ -281,7 +282,7 @@ Use with for example: <div class="icon explore"></div>
 }
 
 .comparison .form-group #institution-search {
-  width: 600px;
+  width: 260px;
 }
 
 .comparison .form-group .institution-search-label {
@@ -327,8 +328,8 @@ Use with for example: <div class="icon explore"></div>
 }
 
 .comparison table th {
-  padding: 5px 25px;
-  width: 50%;
+  padding: 5px 5px;
+  /*width: 50%;*/
   text-transform: none;
   font-family: sans-serif;
   color: #fff;
@@ -346,43 +347,43 @@ Use with for example: <div class="icon explore"></div>
 
 /* Benefit Estimator */
 
-.comparison #benefit-estimator {}
+.comparison .benefit-estimator {}
 
-.comparison #benefit-estimator a:focus {
+.comparison .benefit-estimator a:focus {
   outline: 1px dashed #fff;
 }
 
-.comparison #benefit-estimator table {
-  background: #249120 url('../img/dollar_sign.png') 3.5% 50% no-repeat;
+.comparison .benefit-estimator table {
+  background-color: #249120;
 }
 
-.comparison #benefit-estimator table th {
-  padding-left: 100px;
+.comparison .benefit-estimator table th {
+  /*padding-left: 100px;*/
 }
 
-.comparison #benefit-estimator td#institution {
-  padding-left: 100px;
+.comparison .benefit-estimator td#institution {
+  /*padding-left: 100px;*/
   font-size: 30px;
   font-weight: bold;
 }
-.comparison #benefit-estimator td#location {
-  padding-left: 100px;
+.comparison .benefit-estimator td#location {
+  /*padding-left: 100px;*/
 }
-.comparison #benefit-estimator td#type {
-  padding-left: 100px;
+.comparison .benefit-estimator td#type {
+  /*padding-left: 100px;*/
   font-style: italic;
 }
 
-.comparison #benefit-estimator table.inactive {
-  background: #808080 url('../img/dollar_sign.png') 3.5% 50% no-repeat;
+.comparison .benefit-estimator table.inactive {
+  background-color: #249120;
 }
-.comparison #benefit-estimator table.inactive td#institution,
-.comparison #benefit-estimator table.inactive td#location,
-.comparison #benefit-estimator table.inactive td#type {
+.comparison .benefit-estimator table.inactive td#institution,
+.comparison .benefit-estimator table.inactive td#location,
+.comparison .benefit-estimator table.inactive td#type {
   display: none;
 }
 
-.comparison #benefit-estimator #voc-rehab {
+.comparison .benefit-estimator #voc-rehab {
   font-style: normal;
 }
 
@@ -396,25 +397,25 @@ Use with for example: <div class="icon explore"></div>
 }
 
 .comparison #calculator table {
-  background: #249120 url('../img/dollar_sign.png') 3.5% 50% no-repeat;
+  background-color: #249120;
 }
 
 .comparison #calculator table th {
-  padding-left: 100px;
+  /*padding-left: 100px;*/
   font-weight: bold;
   width: 35%;
 }
 
 .comparison #calculator td#institution-calculator {
-  padding-left: 100px;
+  /*padding-left: 100px;*/
   font-size: 30px;
   font-weight: bold;
 }
 .comparison #calculator td#location-calculator {
-  padding-left: 100px;
+  /*padding-left: 100px;*/
 }
 .comparison #calculator td#type-calculator {
-  padding-left: 100px;
+  /*padding-left: 100px;*/
   padding-bottom: 20px;
   font-style: italic;
 }
@@ -465,59 +466,59 @@ Use with for example: <div class="icon explore"></div>
 
 /* Veteran Indicators */
 
-.comparison #veteran-indicators {}
+.comparison .veteran-indicators {}
 
-.comparison #veteran-indicators a {
+.comparison .veteran-indicators a {
   font-size: 18px;
 }
 
-.comparison #veteran-indicators a:focus {
+.comparison .veteran-indicators a:focus {
   outline: 1px dashed #fff;
 }
 
-.comparison #veteran-indicators table {
-  background: #43798D url('../img/medal.jpg') 90% 50% no-repeat;
+.comparison .veteran-indicators table {
+  background-color: #43798D;
 }
 
-.comparison #veteran-indicators table th {
-  padding-left: 100px;
+.comparison .veteran-indicators table th {
+  /*padding-left: 100px;*/
 }
 
-.comparison #veteran-indicators img.yellow-ribbon {
+.comparison .veteran-indicators img.yellow-ribbon {
   width: 20px;
   height: 20px;
 }
 
 /* School Indicators */
 
-.comparison #school-indicators {
+.comparison .school-indicators {
   margin: 20px 0;
 }
 
-.comparison #school-indicators table {
+.comparison .school-indicators table {
   background: none;
   border: 2px solid #003F72;
 }
-.comparison #school-indicators table thead {
+.comparison .school-indicators table thead {
   background: #003F72;
 }
 
-.comparison #school-indicators table td {
+.comparison .school-indicators table td {
   padding: 0;
 }
 
-.comparison #school-indicators .box {
+.comparison .school-indicators .box {
   margin-bottom: 25px;
   text-align: center;
 }
 
-.comparison #school-indicators .box > div {
+.comparison .school-indicators .box > div {
   display: inline-block;
   vertical-align: middle;
-  width: 325px;
+  /*width: 325px;*/
 }
 
-.comparison #school-indicators .box .description {
+.comparison .school-indicators .box .description {
   text-align: left;
 }
 
