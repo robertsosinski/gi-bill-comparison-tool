@@ -547,6 +547,10 @@ Use with for example: <div class="icon explore"></div>
   border: 2px solid #003F72;
 }
 
+.ui-autocomplete-input {
+  width: 265px;
+}
+
 .ui-autocomplete .ui-menu .ui-menu-item {
   font-size: 14px;
 }

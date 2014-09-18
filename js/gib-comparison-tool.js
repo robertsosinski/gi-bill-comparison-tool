@@ -204,7 +204,8 @@ var InstitutionData = (function(data, index) {
     if (institution.yr) {
       var location = institution.country == 'USA' ? institution.state : 'overseas';
       var linkFirstHalf = '<a href="http://www.benefits.va.gov/gibill/yellow_ribbon/2014/states/' + location + '.asp" onclick="track(\'Yellow Ribbon Rates\', \'';
-      var linkSecondHalf = '\');" target="_blank">See YR rates &raquo;</a>';
+      // var linkSecondHalf = '\');" target="_blank">See YR rates &raquo;</a>';
+      var linkSecondHalf = '';
 
       var linkVetIndicators = linkFirstHalf + 'Vet Indicators' + linkSecondHalf;
       var linkCalculator = linkFirstHalf + 'Calculator' + linkSecondHalf;
@@ -289,9 +290,9 @@ var InstitutionData = (function(data, index) {
 
     if (institution.student_veteran) {
       getElement('#student-veterans', '#veteran-indicators').html('Yes');
-      if (institution.student_veteran_link) {
-        getElement('#student-veterans', '#veteran-indicators').append(' &nbsp; <a href="'+ institution.student_veteran_link +'" onclick="track(\'Student Veterans Group\', \'Click\');" target="_blank">Go to site &raquo;</a>');
-      }
+      // if (institution.student_veteran_link) {
+      //   getElement('#student-veterans', '#veteran-indicators').append(' &nbsp; <a href="'+ institution.student_veteran_link +'" onclick="track(\'Student Veterans Group\', \'Click\');" target="_blank">Go to site &raquo;</a>');
+      // }
     } else {
       getElement('#student-veterans', '#veteran-indicators').html('No');
     }
@@ -1086,13 +1087,13 @@ var InstitutionData = (function(data, index) {
       if (calculated.institution_type == 'ojt') {
         calculated.est_tuition_fees = '';
       } else if (calculated.institution_type == 'flight') {
-        calculated.est_tuition_fees = formatCurrency(FLTTFCAP * calculated.tier) + ' / year (up to)';
+        calculated.est_tuition_fees = formatCurrency(FLTTFCAP * calculated.tier);
       } else if (calculated.institution_type == 'correspond') {
-        calculated.est_tuition_fees = formatCurrency(CORRESPONDTFCAP * calculated.tier) + ' / year (up to)';
+        calculated.est_tuition_fees = formatCurrency(CORRESPONDTFCAP * calculated.tier);
       } else if (calculated.institution_type == 'public' && institution.country == 'USA') {
-        calculated.est_tuition_fees = Math.round(calculated.tier * 100) + '% of instate tuition';
+        calculated.est_tuition_fees = Math.round(calculated.tier * 100) + '% of tuition';
       } else {
-        calculated.est_tuition_fees = formatCurrency(TFCAP * calculated.tier) + ' / year (up to)';
+        calculated.est_tuition_fees = formatCurrency(TFCAP * calculated.tier);
       }
     };
 
@@ -1112,11 +1113,11 @@ var InstitutionData = (function(data, index) {
       } else if (calculated.institution_type == 'ojt') {
         calculated.est_housing_allowance = formatCurrency(calculated.tier * institution.bah) + ' / month';
       } else if (formData.online) {
-        calculated.est_housing_allowance = formatCurrency(calculated.tier * AVGBAH / 2) + ' / month (full time)';
+        calculated.est_housing_allowance = formatCurrency(calculated.tier * AVGBAH / 2) + ' / month';
       } else if (institution.country != 'USA') {
-        calculated.est_housing_allowance = formatCurrency(calculated.tier * AVGBAH) + ' / month (full time)';
+        calculated.est_housing_allowance = formatCurrency(calculated.tier * AVGBAH) + ' / month';
       } else {
-        calculated.est_housing_allowance = formatCurrency(calculated.tier * institution.bah) + ' / month (full time)';
+        calculated.est_housing_allowance = formatCurrency(calculated.tier * institution.bah) + ' / month';
       }
     };
 
