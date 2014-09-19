@@ -328,7 +328,7 @@ Use with for example: <div class="icon explore"></div>
 }
 
 .comparison table th {
-  padding: 5px 5px;
+  padding: 7px 5px;
   /*width: 50%;*/
   text-transform: none;
   font-family: sans-serif;
@@ -492,7 +492,8 @@ Use with for example: <div class="icon explore"></div>
 /* School Indicators */
 
 .comparison .school-indicators {
-  margin: 20px 0;
+  /*margin: 20px 0;*/
+  margin-top: -2px;
 }
 
 .comparison .school-indicators table {
